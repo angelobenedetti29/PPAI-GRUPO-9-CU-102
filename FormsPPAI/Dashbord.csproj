@@ -43,6 +43,7 @@
       <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -55,61 +56,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="detalleEntradas.cs">
+    <Compile Include="DataAccessLayer\EntradasAdapter.cs" />
+    <Compile Include="DataAccessLayer\PrecioAdapter.cs" />
+    <Compile Include="DataAccessLayer\SedeAdapter.cs" />
+    <Compile Include="DataAccessLayer\TarifaAdapter.cs" />
+    <Compile Include="DataAccessLayer\TiempoAdapter.cs" />
+    <Compile Include="DataAccessLayer\TiposEntradasAdapter.cs" />
+    <Compile Include="DataAccessLayer\GeneralAdapter.cs" />
+    <Compile Include="DataAccessLayer\TiposVisitasAdapter.cs" />
+    <Compile Include="DataAccessLayer\UsuariosAdapter.cs" />
+    <Compile Include="Forms\DetalleEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="detalleEntradas.Designer.cs">
-      <DependentUpon>detalleEntradas.cs</DependentUpon>
+    <Compile Include="Forms\DetalleEntradas.Designer.cs">
+      <DependentUpon>DetalleEntradas.cs</DependentUpon>
     </Compile>
-    <Compile Include="elegirTarifa.cs">
+    <Compile Include="Forms\ElegirTarifa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="elegirTarifa.Designer.cs">
-      <DependentUpon>elegirTarifa.cs</DependentUpon>
+    <Compile Include="Forms\ElegirTarifa.Designer.cs">
+      <DependentUpon>ElegirTarifa.cs</DependentUpon>
     </Compile>
-    <Compile Include="elegirEntradas.cs">
+    <Compile Include="Forms\ElegirEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="elegirEntradas.Designer.cs">
-      <DependentUpon>elegirEntradas.cs</DependentUpon>
+    <Compile Include="Forms\ElegirEntradas.Designer.cs">
+      <DependentUpon>ElegirEntradas.cs</DependentUpon>
     </Compile>
-    <Compile Include="opcionesRV.cs">
+    <Compile Include="Forms\OpcionesRV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="opcionesRV.Designer.cs">
-      <DependentUpon>opcionesRV.cs</DependentUpon>
+    <Compile Include="Forms\OpcionesRV.Designer.cs">
+      <DependentUpon>OpcionesRV.cs</DependentUpon>
     </Compile>
-    <Compile Include="principal.cs">
+    <Compile Include="Forms\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal.Designer.cs">
-      <DependentUpon>principal.cs</DependentUpon>
+    <Compile Include="Forms\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="iniciarSesion.cs">
+    <Compile Include="Forms\IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="iniciarSesion.Designer.cs">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
+    <Compile Include="Forms\IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TarifasSede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TarifasSede.designer.cs">
+      <DependentUpon>TarifasSede.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="detalleEntradas.resx">
-      <DependentUpon>detalleEntradas.cs</DependentUpon>
+    <Compile Include="Utilities\Generics.cs" />
+    <EmbeddedResource Include="Forms\DetalleEntradas.resx">
+      <DependentUpon>DetalleEntradas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="elegirEntradas.resx">
-      <DependentUpon>elegirEntradas.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ElegirEntradas.resx">
+      <DependentUpon>ElegirEntradas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="elegirTarifa.resx">
-      <DependentUpon>elegirTarifa.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ElegirTarifa.resx">
+      <DependentUpon>ElegirTarifa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="opcionesRV.resx">
-      <DependentUpon>opcionesRV.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\OpcionesRV.resx">
+      <DependentUpon>OpcionesRV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="principal.resx">
-      <DependentUpon>principal.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="iniciarSesion.resx">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TarifasSede.resx">
+      <DependentUpon>TarifasSede.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,5 +154,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
