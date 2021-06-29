@@ -16,7 +16,7 @@ namespace Dashbord {
 			}
 
 			try {
-				if (DataAccessLayer.UsuariosAdapter.ReadUsuario(txtNombreUsuario.Text.Trim(), txtPassword.Text.Trim()).Rows.Count != 1) {
+				if (DataAccessLayer.UsuarioAdapter.ReadUsuario(txtNombreUsuario.Text.Trim(), txtPassword.Text.Trim()).Rows.Count != 1) {
 					MessageBox.Show("Usuario inexistente");
 					Generics.CleanFields(this);
 
@@ -27,7 +27,7 @@ namespace Dashbord {
 				Application.Exit();
 			}
 
-			new OpcionesRV().Show();
+			new OpcionesRV(txtNombreUsuario.Text.Trim()).Show();
 			Hide();
 		}
 	}

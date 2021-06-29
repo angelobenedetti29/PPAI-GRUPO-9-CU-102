@@ -36,15 +36,15 @@ namespace Dashbord
 			this.panelRV = new System.Windows.Forms.Panel();
 			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			this.pibUsuario = new System.Windows.Forms.PictureBox();
-			this.lblResponsableVentas = new System.Windows.Forms.Label();
+			this.lblCargo = new System.Windows.Forms.Label();
 			this.lblTarifaSede = new System.Windows.Forms.Label();
 			this.dtgTarifaSede = new System.Windows.Forms.DataGridView();
-			this.btnAceptar = new System.Windows.Forms.Button();
-			this.btnCloseForm = new System.Windows.Forms.Button();
 			this.tipoEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.TipoVisita = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.guia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.btnAceptar = new System.Windows.Forms.Button();
+			this.btnCloseForm = new System.Windows.Forms.Button();
 			this.panelRV.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pibUsuario)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dtgTarifaSede)).BeginInit();
@@ -55,7 +55,7 @@ namespace Dashbord
 			this.panelRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(92)))), ((int)(((byte)(81)))));
 			this.panelRV.Controls.Add(this.btnCerrarSesion);
 			this.panelRV.Controls.Add(this.pibUsuario);
-			this.panelRV.Controls.Add(this.lblResponsableVentas);
+			this.panelRV.Controls.Add(this.lblCargo);
 			this.panelRV.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panelRV.Location = new System.Drawing.Point(0, 0);
 			this.panelRV.Name = "panelRV";
@@ -85,16 +85,15 @@ namespace Dashbord
 			this.pibUsuario.TabIndex = 3;
 			this.pibUsuario.TabStop = false;
 			// 
-			// lblResponsableVentas
+			// lblCargo
 			// 
-			this.lblResponsableVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResponsableVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.lblResponsableVentas.Location = new System.Drawing.Point(3, 112);
-			this.lblResponsableVentas.Name = "lblResponsableVentas";
-			this.lblResponsableVentas.Size = new System.Drawing.Size(197, 61);
-			this.lblResponsableVentas.TabIndex = 2;
-			this.lblResponsableVentas.Text = "Responsable de Ventas";
-			this.lblResponsableVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.lblCargo.Location = new System.Drawing.Point(3, 112);
+			this.lblCargo.Name = "lblCargo";
+			this.lblCargo.Size = new System.Drawing.Size(197, 61);
+			this.lblCargo.TabIndex = 2;
+			this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblTarifaSede
 			// 
@@ -153,34 +152,6 @@ namespace Dashbord
 			this.dtgTarifaSede.Size = new System.Drawing.Size(572, 314);
 			this.dtgTarifaSede.TabIndex = 20;
 			// 
-			// btnAceptar
-			// 
-			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
-			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.btnAceptar.Location = new System.Drawing.Point(427, 445);
-			this.btnAceptar.Name = "btnAceptar";
-			this.btnAceptar.Size = new System.Drawing.Size(151, 41);
-			this.btnAceptar.TabIndex = 21;
-			this.btnAceptar.Text = "Aceptar";
-			this.btnAceptar.UseVisualStyleBackColor = false;
-			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-			// 
-			// btnCloseForm
-			// 
-			this.btnCloseForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-			this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.btnCloseForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCloseForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.btnCloseForm.Location = new System.Drawing.Point(748, 0);
-			this.btnCloseForm.Name = "btnCloseForm";
-			this.btnCloseForm.Size = new System.Drawing.Size(43, 40);
-			this.btnCloseForm.TabIndex = 22;
-			this.btnCloseForm.Text = "X";
-			this.btnCloseForm.UseVisualStyleBackColor = false;
-			this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
-			// 
 			// tipoEntrada
 			// 
 			this.tipoEntrada.DataPropertyName = "tipo_entrada";
@@ -217,6 +188,34 @@ namespace Dashbord
 			this.guia.ReadOnly = true;
 			this.guia.Width = 125;
 			// 
+			// btnAceptar
+			// 
+			this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(104)))), ((int)(((byte)(166)))));
+			this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.btnAceptar.Location = new System.Drawing.Point(427, 445);
+			this.btnAceptar.Name = "btnAceptar";
+			this.btnAceptar.Size = new System.Drawing.Size(151, 41);
+			this.btnAceptar.TabIndex = 21;
+			this.btnAceptar.Text = "Aceptar";
+			this.btnAceptar.UseVisualStyleBackColor = false;
+			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+			// 
+			// btnCloseForm
+			// 
+			this.btnCloseForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+			this.btnCloseForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.btnCloseForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCloseForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.btnCloseForm.Location = new System.Drawing.Point(748, 0);
+			this.btnCloseForm.Name = "btnCloseForm";
+			this.btnCloseForm.Size = new System.Drawing.Size(43, 40);
+			this.btnCloseForm.TabIndex = 22;
+			this.btnCloseForm.Text = "X";
+			this.btnCloseForm.UseVisualStyleBackColor = false;
+			this.btnCloseForm.Click += new System.EventHandler(this.btnCloseForm_Click);
+			// 
 			// TarifasSede
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +244,7 @@ namespace Dashbord
         private System.Windows.Forms.Panel panelRV;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.PictureBox pibUsuario;
-        private System.Windows.Forms.Label lblResponsableVentas;
+        private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.Label lblTarifaSede;
         private System.Windows.Forms.DataGridView dtgTarifaSede;
         private System.Windows.Forms.Button btnAceptar;

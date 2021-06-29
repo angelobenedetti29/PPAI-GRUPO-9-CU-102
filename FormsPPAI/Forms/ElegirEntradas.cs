@@ -4,14 +4,16 @@ using System.Windows.Forms;
 
 namespace Dashbord {
 	public partial class ElegirEntradas : Form {
+		private string username;
 		private string tipoEntrada;
 		private string tipoVisita;
 		private bool hayGuia;
 		private int tiempo;
 
-		public ElegirEntradas(string tipoEntrada, string tipoVisita, bool hayGuia, int tiempo) {
+		public ElegirEntradas(string username, string tipoEntrada, string tipoVisita, bool hayGuia, int tiempo) {
 			InitializeComponent();
 
+			this.username = username;
 			this.tipoEntrada = tipoEntrada;
 			this.tipoVisita = tipoVisita;
 			this.hayGuia = hayGuia;
@@ -26,12 +28,18 @@ namespace Dashbord {
 				return;
 			}
 
-			if (int.Parse(txtNroEntradas.Text.Trim()) > (SedeAdapter.ReadMaxEntradas() - EntradasAdapter.ReadEntradas())) {
+			if (int.Parse(txtNroEntradas.Text.Trim()) > (SedeAdapter.ReadMaxEntradas() - EntradaAdapter.ReadCantEntradas())) {
 				MessageBox.Show("Numero de entradas maximo superado.");
 				return;
 			}
 
-			new DetalleEntradas(tipoEntrada, tipoVisita, hayGuia, int.Parse(txtNroEntradas.Text.Trim())).ShowDialog();
+			new DetalleEntradas(username, tipoEntrada, tipoVisita, hayGuia, int.Parse(txtNroEntradas.Text.Trim())).ShowDialog();
+		}
+
+		private void ElegirEntradas_Load(object sender, EventArgs e) {
+			lblCargo.Text = UsuarioAdapter.ReadCargo(username).Rows[0][0].ToString();
+
+			lblMaximo.Text = $"Maximo: {SedeAdapter.ReadMaxEntradas() - EntradaAdapter.ReadCantEntradas()} entradas en la \nSede {UsuarioAdapter.ReadSede(username).Rows[0][0]}";
 		}
 	}
 }

@@ -29,11 +29,12 @@ namespace Dashbord {
 			this.panelRV = new System.Windows.Forms.Panel();
 			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			this.pibUsuario = new System.Windows.Forms.PictureBox();
-			this.lblResponsableVentas = new System.Windows.Forms.Label();
+			this.lblCargo = new System.Windows.Forms.Label();
 			this.btnAceptar = new System.Windows.Forms.Button();
 			this.lblNroEntradas = new System.Windows.Forms.Label();
 			this.btnCloseForm = new System.Windows.Forms.Button();
 			this.txtNroEntradas = new System.Windows.Forms.MaskedTextBox();
+			this.lblMaximo = new System.Windows.Forms.Label();
 			this.panelRV.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pibUsuario)).BeginInit();
 			this.SuspendLayout();
@@ -55,7 +56,7 @@ namespace Dashbord {
 			this.panelRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(92)))), ((int)(((byte)(81)))));
 			this.panelRV.Controls.Add(this.btnCerrarSesion);
 			this.panelRV.Controls.Add(this.pibUsuario);
-			this.panelRV.Controls.Add(this.lblResponsableVentas);
+			this.panelRV.Controls.Add(this.lblCargo);
 			this.panelRV.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panelRV.Location = new System.Drawing.Point(0, 0);
 			this.panelRV.Name = "panelRV";
@@ -85,16 +86,15 @@ namespace Dashbord {
 			this.pibUsuario.TabIndex = 3;
 			this.pibUsuario.TabStop = false;
 			// 
-			// lblResponsableVentas
+			// lblCargo
 			// 
-			this.lblResponsableVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResponsableVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.lblResponsableVentas.Location = new System.Drawing.Point(3, 112);
-			this.lblResponsableVentas.Name = "lblResponsableVentas";
-			this.lblResponsableVentas.Size = new System.Drawing.Size(197, 61);
-			this.lblResponsableVentas.TabIndex = 2;
-			this.lblResponsableVentas.Text = "Responsable de Ventas";
-			this.lblResponsableVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.lblCargo.Location = new System.Drawing.Point(3, 112);
+			this.lblCargo.Name = "lblCargo";
+			this.lblCargo.Size = new System.Drawing.Size(197, 61);
+			this.lblCargo.TabIndex = 2;
+			this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnAceptar
 			// 
@@ -144,12 +144,22 @@ namespace Dashbord {
 			this.txtNroEntradas.TabIndex = 22;
 			this.txtNroEntradas.ValidatingType = typeof(int);
 			// 
+			// lblMaximo
+			// 
+			this.lblMaximo.AutoSize = true;
+			this.lblMaximo.ForeColor = System.Drawing.Color.Red;
+			this.lblMaximo.Location = new System.Drawing.Point(421, 259);
+			this.lblMaximo.Name = "lblMaximo";
+			this.lblMaximo.Size = new System.Drawing.Size(0, 13);
+			this.lblMaximo.TabIndex = 23;
+			// 
 			// ElegirEntradas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.ClientSize = new System.Drawing.Size(790, 542);
+			this.Controls.Add(this.lblMaximo);
 			this.Controls.Add(this.txtNroEntradas);
 			this.Controls.Add(this.btnCloseForm);
 			this.Controls.Add(this.lblNroEntradas);
@@ -160,6 +170,7 @@ namespace Dashbord {
 			this.Name = "ElegirEntradas";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.ElegirEntradas_Load);
 			this.panelRV.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pibUsuario)).EndInit();
 			this.ResumeLayout(false);
@@ -173,10 +184,11 @@ namespace Dashbord {
 		private System.Windows.Forms.Panel panelRV;
 		private System.Windows.Forms.Button btnCerrarSesion;
 		private System.Windows.Forms.PictureBox pibUsuario;
-		private System.Windows.Forms.Label lblResponsableVentas;
+		private System.Windows.Forms.Label lblCargo;
 		private System.Windows.Forms.Button btnAceptar;
 		private System.Windows.Forms.Label lblNroEntradas;
 		private System.Windows.Forms.Button btnCloseForm;
 		private System.Windows.Forms.MaskedTextBox txtNroEntradas;
+		private System.Windows.Forms.Label lblMaximo;
 	}
 }

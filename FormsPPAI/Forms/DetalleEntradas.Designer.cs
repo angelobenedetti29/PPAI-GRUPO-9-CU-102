@@ -31,7 +31,7 @@ namespace Dashbord {
 			this.panelRV = new System.Windows.Forms.Panel();
 			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			this.pibUsuario = new System.Windows.Forms.PictureBox();
-			this.lblResponsableVentas = new System.Windows.Forms.Label();
+			this.lblCargo = new System.Windows.Forms.Label();
 			this.btnAceptar = new System.Windows.Forms.Button();
 			this.lblDetalleEntradas = new System.Windows.Forms.Label();
 			this.dtgDetalleEntradas = new System.Windows.Forms.DataGridView();
@@ -52,7 +52,7 @@ namespace Dashbord {
 			this.panelRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(92)))), ((int)(((byte)(81)))));
 			this.panelRV.Controls.Add(this.btnCerrarSesion);
 			this.panelRV.Controls.Add(this.pibUsuario);
-			this.panelRV.Controls.Add(this.lblResponsableVentas);
+			this.panelRV.Controls.Add(this.lblCargo);
 			this.panelRV.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panelRV.Location = new System.Drawing.Point(0, 0);
 			this.panelRV.Name = "panelRV";
@@ -82,16 +82,15 @@ namespace Dashbord {
 			this.pibUsuario.TabIndex = 3;
 			this.pibUsuario.TabStop = false;
 			// 
-			// lblResponsableVentas
+			// lblCargo
 			// 
-			this.lblResponsableVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResponsableVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.lblResponsableVentas.Location = new System.Drawing.Point(3, 112);
-			this.lblResponsableVentas.Name = "lblResponsableVentas";
-			this.lblResponsableVentas.Size = new System.Drawing.Size(197, 61);
-			this.lblResponsableVentas.TabIndex = 2;
-			this.lblResponsableVentas.Text = "Responsable de Ventas";
-			this.lblResponsableVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.lblCargo.Location = new System.Drawing.Point(3, 112);
+			this.lblCargo.Name = "lblCargo";
+			this.lblCargo.Size = new System.Drawing.Size(197, 61);
+			this.lblCargo.TabIndex = 2;
+			this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnAceptar
 			// 
@@ -247,7 +246,7 @@ namespace Dashbord {
 		private System.Windows.Forms.Panel panelRV;
 		private System.Windows.Forms.Button btnCerrarSesion;
 		private System.Windows.Forms.PictureBox pibUsuario;
-		private System.Windows.Forms.Label lblResponsableVentas;
+		private System.Windows.Forms.Label lblCargo;
 		private System.Windows.Forms.Button btnAceptar;
 		private System.Windows.Forms.Label lblDetalleEntradas;
 		private System.Windows.Forms.DataGridView dtgDetalleEntradas;

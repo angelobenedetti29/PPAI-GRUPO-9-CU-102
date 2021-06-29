@@ -4,11 +4,21 @@ using System.Windows.Forms;
 
 namespace Dashbord {
 	public partial class TarifasSede : Form {
-		public TarifasSede() => InitializeComponent();
+		private string username;
 
-		private void btnAceptar_Click(object sender, EventArgs e) => new ElegirTarifa().ShowDialog();
+		public TarifasSede(string username) {
+			InitializeComponent();
 
-		private void TarifasSede_Load(object sender, EventArgs e) => dtgTarifaSede.DataSource = TarifaAdapter.ReadTarifasWithMontos();
+			this.username = username;
+		}
+
+		private void btnAceptar_Click(object sender, EventArgs e) => new ElegirTarifa(username).ShowDialog();
+
+		private void TarifasSede_Load(object sender, EventArgs e) {
+			lblCargo.Text = UsuarioAdapter.ReadCargo(username).Rows[0][0].ToString();
+
+			dtgTarifaSede.DataSource = TarifaAdapter.ReadTarifasWithMontos();
+		}
 
 		private void btnCloseForm_Click(object sender, EventArgs e) => Close();
 	}

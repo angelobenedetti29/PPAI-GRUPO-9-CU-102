@@ -27,7 +27,7 @@ namespace Dashbord {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpcionesRV));
 			this.panelRV = new System.Windows.Forms.Panel();
 			this.btnCerrarSesion = new System.Windows.Forms.Button();
-			this.lblResponsableVentas = new System.Windows.Forms.Label();
+			this.lblCargo = new System.Windows.Forms.Label();
 			this.pibUsuario = new System.Windows.Forms.PictureBox();
 			this.lblMenuOpciones = new System.Windows.Forms.Label();
 			this.btnCloseForm = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@ namespace Dashbord {
 			// 
 			this.panelRV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(92)))), ((int)(((byte)(81)))));
 			this.panelRV.Controls.Add(this.btnCerrarSesion);
-			this.panelRV.Controls.Add(this.lblResponsableVentas);
+			this.panelRV.Controls.Add(this.lblCargo);
 			this.panelRV.Controls.Add(this.pibUsuario);
 			this.panelRV.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panelRV.Location = new System.Drawing.Point(0, 0);
@@ -61,16 +61,15 @@ namespace Dashbord {
 			this.btnCerrarSesion.Text = "Cerrar Sesión";
 			this.btnCerrarSesion.UseVisualStyleBackColor = false;
 			// 
-			// lblResponsableVentas
+			// lblCargo
 			// 
-			this.lblResponsableVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblResponsableVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-			this.lblResponsableVentas.Location = new System.Drawing.Point(3, 112);
-			this.lblResponsableVentas.Name = "lblResponsableVentas";
-			this.lblResponsableVentas.Size = new System.Drawing.Size(197, 61);
-			this.lblResponsableVentas.TabIndex = 1;
-			this.lblResponsableVentas.Text = "Responsable de Ventas";
-			this.lblResponsableVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
+			this.lblCargo.Location = new System.Drawing.Point(3, 112);
+			this.lblCargo.Name = "lblCargo";
+			this.lblCargo.Size = new System.Drawing.Size(197, 61);
+			this.lblCargo.TabIndex = 1;
+			this.lblCargo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// pibUsuario
 			// 
@@ -132,6 +131,7 @@ namespace Dashbord {
 			this.Name = "OpcionesRV";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.OpcionesRV_Load);
 			this.panelRV.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.pibUsuario)).EndInit();
 			this.ResumeLayout(false);
@@ -141,7 +141,7 @@ namespace Dashbord {
 		#endregion
 
 		private System.Windows.Forms.Panel panelRV;
-		private System.Windows.Forms.Label lblResponsableVentas;
+		private System.Windows.Forms.Label lblCargo;
 		private System.Windows.Forms.PictureBox pibUsuario;
 		private System.Windows.Forms.Button btnCerrarSesion;
 		private System.Windows.Forms.Label lblMenuOpciones;

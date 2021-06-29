@@ -6,11 +6,19 @@ using System.Windows.Forms;
 
 namespace Dashbord {
 	public partial class ElegirTarifa : Form {
-		public ElegirTarifa() => InitializeComponent();
+		private string username;
+
+		public ElegirTarifa(string username) {
+			InitializeComponent();
+
+			this.username = username;
+		}
 
 		private void btnCloseForm_Click(object sender, EventArgs e) => Close();
 
 		private void ElegirTarifa_Load(object sender, EventArgs e) {
+			lblCargo.Text = UsuarioAdapter.ReadCargo(username).Rows[0][0].ToString();
+
 			try {
 				Generics.LoadComboBox(cmbEntrada, "nombre", () => TiposEntradasAdapter.ReadTipoEntrada());
 				Generics.LoadComboBox(cmbVisita, "nombre", () => TiposVisitasAdapter.ReadTiposVisitas());
@@ -26,7 +34,10 @@ namespace Dashbord {
 				return;
 			}
 
-			new ElegirEntradas(cmbEntrada.SelectedValue.ToString(), cmbVisita.SelectedValue.ToString(), rdoSi.Checked, TiempoAdapter.ReadDuracion()).ShowDialog();
+			// TODO: preguntarle a la profe que hacer con este dato
+			ObraAdapter.ReadTiempo();
+
+			new ElegirEntradas(username, cmbEntrada.SelectedValue.ToString(), cmbVisita.SelectedValue.ToString(), rdoSi.Checked, TiempoAdapter.ReadDuracion()).ShowDialog();
 		}
 	}
 }
