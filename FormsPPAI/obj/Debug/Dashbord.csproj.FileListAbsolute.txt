@@ -23,7 +23,6 @@ C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\bin\Debug\Dashbord.pdb
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\bin\Debug\MetroFramework.Design.dll
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\bin\Debug\MetroFramework.dll
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.csprojAssemblyReference.cache
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.detalleEntradas.resources
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.elegirEntradas.resources
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.elegirTarifa.resources
@@ -98,3 +97,4 @@ C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\bin\Debug\zh-CHT\Micro
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.Forms.Ticket.resources
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\RdlCompile.cache
 C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\RdlCompile.compiled
+C:\Users\ignaz\source\repos\PPAI-GRUPO-9-CU-102\FormsPPAI\obj\Debug\Dashbord.csproj.AssemblyReference.cache

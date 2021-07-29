@@ -89,6 +89,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSIDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Entrada.cs" />
     <Compile Include="Forms\DetalleEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,8 +216,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
