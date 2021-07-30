@@ -89,6 +89,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSIDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Entities\DetalleExposicion.cs" />
+    <Compile Include="Entities\Sede.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\Entrada.cs" />
+    <Compile Include="Entities\Exposicion.cs" />
+    <Compile Include="Entities\Obra.cs" />
+    <Compile Include="Entities\ReservaVisita.cs" />
+    <Compile Include="Entities\Tarifa.cs" />
+    <Compile Include="Entities\TipoEntrada.cs" />
+    <Compile Include="Entities\TipoVisita.cs" />
     <Compile Include="Forms\DetalleEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,8 +225,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
